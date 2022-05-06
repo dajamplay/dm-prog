@@ -1,0 +1,26 @@
+{
+    "name": "aksenov/gg",
+    "description": "framework",
+    "config": {
+        "sort-packages": true,
+        "process-timeout":0
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "roave/security-advisories": "dev-master",
+        "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "server": "php -S localhost:8080 -t public",
+        "test": "phpunit --colors=always"
+    }
+}
