@@ -13,8 +13,10 @@
     },
     "require": {
         "php": ">=8.0",
-        "roave/security-advisories": "dev-master",
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "laminas/laminas-diactoros": "^2.10",
+        "php-di/php-di": "6.4.0",
+        "roave/security-advisories": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
