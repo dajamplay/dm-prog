@@ -30,11 +30,10 @@ class RouteMiddleware implements MiddlewareInterface
 
         if (!class_exists($class)) return $handler->handle($request); // передаём управление следующему middleware
 
+        $obj = new $class($this->routerVars);
         if ($method) {
-            $obj = new $class($this->routerVars);
             return $obj->$method($request, $handler);
         } else {
-            $obj = new $class($this->routerVars);
 
             if (method_exists($obj, '__invoke')) {
                 return $obj($request, $handler);

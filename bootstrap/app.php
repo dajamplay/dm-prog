@@ -35,11 +35,11 @@ switch ($routeInfo[0]) {
 }
 
 // для отладки
-var_dump($routerHandler);
+//var_dump($routerHandler);
 //var_dump($routerVars);
 
-$container->set(App\Middleware\DemoMiddleware::class, DI\factory( function () {
-    return new App\Middleware\DemoMiddleware();
+$container->set(App\Middleware\AuthMiddleware::class, DI\factory( function () {
+    return new App\Middleware\AuthMiddleware();
 }));
 
 $container->set(App\Middleware\RouteMiddleware::class, DI\factory( function () use ($routerHandler, $routerVars){
@@ -48,8 +48,8 @@ $container->set(App\Middleware\RouteMiddleware::class, DI\factory( function () u
 
 $dispatcher = new Dispatcher(
     [
-        $container->get(App\Middleware\DemoMiddleware::class),
-        $container->get(App\Middleware\RouteMiddleware::class),
+        $container->get(App\Middleware\AuthMiddleware::class),
+        $container->get(App\Middleware\RouteMiddleware::class)
     ]
 );
 
