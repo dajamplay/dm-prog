@@ -6,6 +6,6 @@ class Test
 {
     public function test()
     {
-        echo 'test2222';
+        echo 'TestClass';
     }
 }

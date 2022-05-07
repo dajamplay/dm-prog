@@ -2,8 +2,7 @@
 
 Domain Services
 
-Инкапсулирует бизнес–логику, которая естественным образом не вписывается
-в объект домена и НЕ является типичными операциями CRUD - они будут принадлежать репозиторию
+Получает чистые данные
 
 ##########################################
 
@@ -26,3 +25,12 @@ Infrastructure Services
 И да, вы можете внедрять репозитории в свои сервисы.
 
 Службы приложений обычно используют как Доменные службы, так и хранилища для обработки внешних запросов.
+
+https://github.com/middlewares/psr15-middlewares
+https://github.com/middlewares/awesome-psr15-middlewares
+https://github.com/middlewares/request-handler
+https://github.com/middlewares/utils/blob/master/src/RequestHandlerContainer.php
+
+PSR 7 REQ RES
+PSR 11 CONTAINER
+PSR 15 MIDDLEWARE
